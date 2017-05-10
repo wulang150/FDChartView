@@ -49,7 +49,7 @@ extern CGFloat Height;
     UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
     lab.center = CGPointMake(pie.centerView.bounds.size.width/2, pie.centerView.bounds.size.height/2);
     lab.textColor = [UIColor blackColor];
-    lab.text = @"饼图";
+    lab.text = @"圆图";
     lab.textAlignment = NSTextAlignmentCenter;
 //    pie.centerView.backgroundColor = [UIColor brownColor];
     [pie.centerView addSubview:lab];
