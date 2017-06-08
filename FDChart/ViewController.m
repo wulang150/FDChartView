@@ -38,12 +38,35 @@ extern CGFloat Height;
 - (void)createView
 {
     titleArr = @[@"表图",@"饼图"];
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Width, Height)];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Width, Height-64)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     [self.view addSubview:_tableView];
+//    _tableView.alwaysBounceVertical = YES;
+////    
+////    UIEdgeInsets inset = _tableView.contentInset;
+////    inset.top = 100;
+////    _tableView.contentInset = inset;
+//////
+//    UILabel *lab = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, Width, 80)];
+//    lab.textAlignment = NSTextAlignmentCenter;
+//    lab.text = @"sdfsdfdsfds";
+//    lab.textColor = [UIColor blueColor];
+////    [_tableView addSubview:lab];
+//    [_tableView insertSubview:lab atIndex:0];
 }
 
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+//    
+////    [_refreshHeaderView egoRefreshScrollViewDidEndDragging:scrollView];
+//    float offset=scrollView.contentOffset.y;
+//    float contentHeight=scrollView.contentSize.height;
+//    float sub=contentHeight-offset;
+//    if ((scrollView.bounds.size.height-sub)>20) {//如果上拉距离超过20p，则加载更多数据
+//        //[self loadMoreData];//此处在view底部加载更多数据
+//        NSLog(@"刷新....");
+//    }
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
