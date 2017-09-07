@@ -28,5 +28,8 @@
 - (id)initWithCenter:(CGPoint) center
               radius:(CGFloat) radius;
 
-- (void)reloadContent;
+- (void)reloadContent:(BOOL)isAnimate;
+
+
+///////////第三次更新，加入手势控制
 @end

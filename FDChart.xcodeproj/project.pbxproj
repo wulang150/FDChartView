@@ -22,6 +22,11 @@
 		9339334F1EAEE2F200B56341 /* FDPie.m in Sources */ = {isa = PBXBuildFile; fileRef = 9339334E1EAEE2F200B56341 /* FDPie.m */; };
 		933933521EAEE7A100B56341 /* FDPieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933933511EAEE7A100B56341 /* FDPieViewController.m */; };
 		933933551EAEEC4B00B56341 /* FDPieChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 933933541EAEEC4B00B56341 /* FDPieChart.m */; };
+		937F74051F1DF18B004C933D /* FDPieGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 937F74041F1DF18B004C933D /* FDPieGesture.m */; };
+		939745F01F26E8DD00D4634C /* FDLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 939745EF1F26E8DD00D4634C /* FDLine.m */; };
+		939745F31F2715A700D4634C /* FDLineChart.m in Sources */ = {isa = PBXBuildFile; fileRef = 939745F21F2715A700D4634C /* FDLineChart.m */; };
+		939745F61F2719BE00D4634C /* FDLineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 939745F51F2719BE00D4634C /* FDLineViewController.m */; };
+		939745F91F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.m in Sources */ = {isa = PBXBuildFile; fileRef = 939745F81F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +77,16 @@
 		933933511EAEE7A100B56341 /* FDPieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDPieViewController.m; sourceTree = "<group>"; };
 		933933531EAEEC4B00B56341 /* FDPieChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDPieChart.h; sourceTree = "<group>"; };
 		933933541EAEEC4B00B56341 /* FDPieChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDPieChart.m; sourceTree = "<group>"; };
+		937F74031F1DF18B004C933D /* FDPieGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDPieGesture.h; sourceTree = "<group>"; };
+		937F74041F1DF18B004C933D /* FDPieGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDPieGesture.m; sourceTree = "<group>"; };
+		939745EE1F26E8DD00D4634C /* FDLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLine.h; sourceTree = "<group>"; };
+		939745EF1F26E8DD00D4634C /* FDLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLine.m; sourceTree = "<group>"; };
+		939745F11F2715A700D4634C /* FDLineChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLineChart.h; sourceTree = "<group>"; };
+		939745F21F2715A700D4634C /* FDLineChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLineChart.m; sourceTree = "<group>"; };
+		939745F41F2719BE00D4634C /* FDLineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLineViewController.h; sourceTree = "<group>"; };
+		939745F51F2719BE00D4634C /* FDLineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLineViewController.m; sourceTree = "<group>"; };
+		939745F71F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+LxThroughPointsBezier.h"; sourceTree = "<group>"; };
+		939745F81F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+LxThroughPointsBezier.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +137,13 @@
 		9339330A1EADE9D400B56341 /* FDChart */ = {
 			isa = PBXGroup;
 			children = (
+				939745ED1F26E85C00D4634C /* FDLineChart */,
 				9339334C1EAEE18B00B56341 /* FDPieChart */,
 				9339333E1EADEA4000B56341 /* FDColumnChart */,
 				933933481EADEE2B00B56341 /* FDColumnViewController.h */,
 				933933491EADEE2B00B56341 /* FDColumnViewController.m */,
+				939745F41F2719BE00D4634C /* FDLineViewController.h */,
+				939745F51F2719BE00D4634C /* FDLineViewController.m */,
 				933933501EAEE7A100B56341 /* FDPieViewController.h */,
 				933933511EAEE7A100B56341 /* FDPieViewController.m */,
 				9339330E1EADE9D400B56341 /* AppDelegate.h */,
@@ -187,8 +205,23 @@
 				9339334E1EAEE2F200B56341 /* FDPie.m */,
 				933933531EAEEC4B00B56341 /* FDPieChart.h */,
 				933933541EAEEC4B00B56341 /* FDPieChart.m */,
+				937F74031F1DF18B004C933D /* FDPieGesture.h */,
+				937F74041F1DF18B004C933D /* FDPieGesture.m */,
 			);
 			path = FDPieChart;
+			sourceTree = "<group>";
+		};
+		939745ED1F26E85C00D4634C /* FDLineChart */ = {
+			isa = PBXGroup;
+			children = (
+				939745F71F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.h */,
+				939745F81F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.m */,
+				939745F11F2715A700D4634C /* FDLineChart.h */,
+				939745F21F2715A700D4634C /* FDLineChart.m */,
+				939745EE1F26E8DD00D4634C /* FDLine.h */,
+				939745EF1F26E8DD00D4634C /* FDLine.m */,
+			);
+			path = FDLineChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +365,15 @@
 				9339334F1EAEE2F200B56341 /* FDPie.m in Sources */,
 				933933101EADE9D400B56341 /* AppDelegate.m in Sources */,
 				933933451EADEA5300B56341 /* FDChartModel.m in Sources */,
+				939745F01F26E8DD00D4634C /* FDLine.m in Sources */,
+				939745F91F2736E600D4634C /* UIBezierPath+LxThroughPointsBezier.m in Sources */,
 				933933461EADEA5300B56341 /* FDColumn.m in Sources */,
+				937F74051F1DF18B004C933D /* FDPieGesture.m in Sources */,
 				933933521EAEE7A100B56341 /* FDPieViewController.m in Sources */,
 				9339330D1EADE9D400B56341 /* main.m in Sources */,
+				939745F61F2719BE00D4634C /* FDLineViewController.m in Sources */,
 				9339334A1EADEE2B00B56341 /* FDColumnViewController.m in Sources */,
+				939745F31F2715A700D4634C /* FDLineChart.m in Sources */,
 				933933551EAEEC4B00B56341 /* FDPieChart.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

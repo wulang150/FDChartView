@@ -41,20 +41,29 @@
 - (void)createView
 {
     [_bgView removeFromSuperview];
-    [self.centerView removeFromSuperview];
     
     _bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height)];
     _bgView.layer.cornerRadius = self.bounds.size.width/2;
     _bgView.backgroundColor = [UIColor clearColor];
     [self addSubview:_bgView];
     
-    //中间的view
-    self.centerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, (_radius-_lineWidth)*2, (_radius-_lineWidth)*2)];
-    _centerView.center = CGPointMake(_radius, _radius);
-    _centerView.backgroundColor = [UIColor whiteColor];
-    _centerView.layer.cornerRadius = _radius-_lineWidth;
-    [self addSubview:_centerView];
     
+    [self bringSubviewToFront:self.centerView];
+}
+
+- (UIView *)centerView
+{
+    if(!_centerView)
+    {
+        //中间的view
+        _centerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, (_radius-_lineWidth)*2, (_radius-_lineWidth)*2)];
+        _centerView.center = CGPointMake(_radius, _radius);
+        _centerView.backgroundColor = [UIColor whiteColor];
+        _centerView.layer.cornerRadius = _radius-_lineWidth;
+        [self addSubview:_centerView];
+    }
+    
+    return _centerView;
 }
 
 //- (void)drawRect:(CGRect)rect
@@ -62,9 +71,7 @@
 //    [self reloadContent];
 //}
 
-
-
-- (void)reloadContent
+- (void)reloadContent:(BOOL)isAnimate
 {
     [self createView];
     [pieLayer removeFromSuperlayer];
@@ -88,13 +95,15 @@
     pieLayer.lineWidth = _lineWidth;
     pieLayer.zPosition = 2;
     
-    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    pathAnimation.duration = _duration;
-    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
-    pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
-    [pieLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
-    
+    if(isAnimate)
+    {
+        CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        pathAnimation.duration = _duration;
+        pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        pathAnimation.fromValue = [NSNumber numberWithFloat:0.0f];
+        pathAnimation.toValue = [NSNumber numberWithFloat:1.0f];
+        [pieLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+    }
     
     if(_gradColorArr.count>1)
     {

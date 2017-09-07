@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "FDColumnViewController.h"
 #import "FDPieViewController.h"
+#import "FDLineViewController.h"
 
 extern CGFloat Width;
 extern CGFloat Height;
@@ -37,7 +38,7 @@ extern CGFloat Height;
 
 - (void)createView
 {
-    titleArr = @[@"表图",@"饼图"];
+    titleArr = @[@"表图",@"饼图",@"曲线图"];
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, Width, Height-64)];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -98,6 +99,12 @@ extern CGFloat Height;
         case 1:
         {
             FDPieViewController *rc = [FDPieViewController new];
+            [self.navigationController pushViewController:rc animated:YES];
+            break;
+        }
+        case 2:
+        {
+            FDLineViewController *rc = [FDLineViewController new];
             [self.navigationController pushViewController:rc animated:YES];
             break;
         }

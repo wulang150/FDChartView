@@ -33,7 +33,7 @@ typedef NS_ENUM(NSUInteger, modelType) {
 @property (nonatomic,assign) CGFloat startX;        //画第一个点的位置，这个会影响柱子的宽度，默认为12
 @property (nonatomic,strong) NSArray *dataArr;      //数据源
 @property (nonatomic,strong) NSArray *labArr;       //所有下标数组
-@property (nonatomic,assign) CGFloat maxValue;     //获取最大值，每个model的value以这个为基准画高，默认为数据源最大值
+@property (nonatomic,assign) CGFloat maxValue;     //获取最大值，每个model的value以这个为基准画高，默认为数据源最大值*1.1
 @property (nonatomic,assign) int mode;      //模式，默认模式
 @property (weak, nonatomic) id <FDColumnChartDelegate> delegate;
 
